@@ -108,8 +108,8 @@ public class NotifyDemoActivity extends Activity {
         new Intent[]{notifyIntent},
         PendingIntent.FLAG_UPDATE_CURRENT);
     Notification notification = new Notification.Builder(NotifyDemoActivity.this)
-        .setSmallIcon(R.drawable.beacon_gray)
-        .setContentTitle("Notify Demo")
+        .setSmallIcon(R.drawable.euro_notify)
+        .setContentTitle("You've got a promotion!")
         .setContentText(msg)
         .setAutoCancel(true)
         .setContentIntent(pendingIntent)
