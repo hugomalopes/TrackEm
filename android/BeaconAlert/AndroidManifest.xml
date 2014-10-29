@@ -17,7 +17,7 @@
 
   <application
       android:label="Estimote Demos"
-      android:theme="@android:style/Theme.Holo.Light">
+      android:theme="@style/CustomActionBarTheme">
 
     <activity
         android:name="com.estimote.examples.demos.AllDemosActivity"

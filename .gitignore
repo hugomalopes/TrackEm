@@ -5,6 +5,9 @@
 # Files for the Dalvik VM
 *.dex
 
+# OSX files
+.DS_Store
+
 # Java class files
 *.class
 
@@ -28,3 +31,14 @@ proguard/
 # Eclipse project files
 .classpath
 .project
+
+# Android Studio
+.idea
+*~
+*.swp
+
+# Intellij project files
+*.iml
+*.ipr
+*.iws
+.idea/
