@@ -16,12 +16,12 @@
   <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
 
   <application
-      android:label="Estimote Demos"
+      android:label="ShopIt"
       android:theme="@style/CustomActionBarTheme">
 
     <activity
         android:name="com.estimote.examples.demos.AllDemosActivity"
-        android:label="Estimote Demos"
+        android:label=""
         android:screenOrientation="portrait">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
@@ -35,15 +35,15 @@
         android:screenOrientation="portrait"/>
 
     <activity android:name="com.estimote.examples.demos.DistanceBeaconActivity"
-              android:label="Distance Demo"
+              android:label=""
               android:screenOrientation="portrait"/>
 
     <activity android:name="com.estimote.examples.demos.NotifyDemoActivity"
-              android:label="Notify Demo"
+              android:label=""
               android:screenOrientation="portrait"/>
 
     <activity android:name="com.estimote.examples.demos.CharacteristicsDemoActivity"
-              android:label="Characteristics Demo"
+              android:label=""
               android:screenOrientation="portrait"/>
 
     <!-- Estimote service responsible for scanning beacons. -->

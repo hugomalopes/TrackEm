@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.os.RemoteException;
 import android.util.Log;
 import android.view.MenuItem;
-import android.widget.TextView;
+
 import com.estimote.sdk.Beacon;
 import com.estimote.sdk.BeaconManager;
 import com.estimote.sdk.Region;
@@ -41,7 +41,7 @@ public class NotifyDemoActivity extends Activity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.notify_demo);
+    setContentView(R.layout.activity_main);
     getActionBar().setDisplayHomeAsUpEnabled(true);
 
     Beacon beacon = getIntent().getParcelableExtra(ListBeaconsActivity.EXTRAS_BEACON);
@@ -57,11 +57,13 @@ public class NotifyDemoActivity extends Activity {
       @Override
       public void onEnteredRegion(Region region, List<Beacon> beacons) {
         postNotification("Hey you've got a promotion!");
+        setContentView(R.layout.notify_demo);
       }
 
       @Override
       public void onExitedRegion(Region region) {
-        postNotification("Comeback if you don't want loose this opportunity!");
+        postNotification("Comeback if you don't want lose this opportunity!");
+        setContentView(R.layout.activity_main);
       }
     });
   }
@@ -107,7 +109,7 @@ public class NotifyDemoActivity extends Activity {
         0,
         new Intent[]{notifyIntent},
         PendingIntent.FLAG_UPDATE_CURRENT);
-    Notification notification = new Notification.Builder(NotifyDemoActivity.this)
+        Notification notification = new Notification.Builder(NotifyDemoActivity.this)
         .setSmallIcon(R.drawable.euro_notify)
         .setContentTitle("You've got a promotion!")
         .setContentText(msg)
@@ -117,8 +119,5 @@ public class NotifyDemoActivity extends Activity {
     notification.defaults |= Notification.DEFAULT_SOUND;
     notification.defaults |= Notification.DEFAULT_LIGHTS;
     notificationManager.notify(NOTIFICATION_ID, notification);
-
-    TextView statusTextView = (TextView) findViewById(R.id.status);
-    statusTextView.setText(msg);
   }
 }

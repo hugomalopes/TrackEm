@@ -8,6 +8,7 @@
     <!-- ActionBar styles -->
     <style name="MyActionBar"
         parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
-        <item name="android:background">@drawable/action_bar_red</item>
+        <item name="android:background">@drawable/custom_action_bar</item>
+        <item name="android:icon">@android:color/transparent</item>
     </style>
 </resources>
